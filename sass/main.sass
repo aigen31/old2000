@@ -1,0 +1,476 @@
+@import "../node_modules/bootstrap/scss/bootstrap-grid"
+@import "../node_modules/normalize.css/normalize"
+@import "node_modules/xp.css/dist/XP.css"
+
+$theme-gradient: linear-gradient(90deg, rgba(4, 25, 173, 0.50) 0%, rgba(0, 81, 231, 0.50) 4.69%, rgba(0, 81, 231, 0.00) 13.02%, rgba(0, 81, 231, 0.00) 84.37%, rgba(0, 81, 231, 0.50) 93.75%, rgba(0, 24, 189, 0.50) 100%), linear-gradient(180deg, #3799FF 0%, #0071FF 24.51%, #0069FA 36.73%, #0059F7 59.17%, #0061FF 91.54%, #0041CE 100%)
+@keyframes slideDown
+	from
+		transform: translateY(-100%)
+	to
+		transform: translateY(0%)
+
+@keyframes slideUp
+	0%
+		transform: translateY(0%)
+		position: fixed
+		top: 0
+		width: auto
+		right: calc(50% - (1320px / 2))
+	50%
+		transform: translateY(-100%)
+	100%
+		position: relative
+		top: auto
+		right: auto
+		transform: translateY(0%)
+
+body
+	background-color: #f5f5f5
+	font-family: Arial, Helvetica, Arial, Helvetica, sans-serif
+	font-size: 14px
+	.download-button
+		margin-top: 10px
+		text-align: left
+		display: inline-block
+		color: #fff
+		border: none
+		border-radius: 10px
+		background: linear-gradient(90deg, rgba(25, 99, 70, 0.84) 0%, rgba(85, 156, 85, 0.00) 5.73%, rgba(62, 151, 62, 0.00) 13.02%, rgba(73, 173, 73, 0.00) 71.88%, rgba(31, 97, 31, 0.84) 100%), linear-gradient(180deg, #3A7C3A 0%, #96C496 4.22%, #459745 23.75%, #3BA03B 48.89%, #369E36 80.73%, #247033 100%)
+		&:hover
+			border: none
+			background: linear-gradient(90deg, rgba(38, 84, 38, 0.84) 0%, rgba(17, 119, 10, 0.00) 18.23%, rgba(18, 139, 21, 0.00) 48.44%, rgba(28, 145, 30, 0.00) 75%, rgba(8, 92, 4, 0.84) 100%), linear-gradient(180deg, #22400E 0%, #318633 8.57%, #138A16 47.06%, #268B23 92.4%, #247226 100%)
+
+input[type=submit]
+	font-family: var(--sans-serif)
+	-webkit-font-smoothing: antialiased
+	font-size: 11px
+	box-sizing: border-box
+	border: 1px solid #003c74
+	background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%,rgba(236, 235, 229, 1) 86%,rgba(216, 208, 196, 1) 100%)
+	box-shadow: none
+	border-radius: 3px
+	&:not(:disabled)
+		&:active,
+		&.active
+			box-shadow: none
+			background: linear-gradient(180deg,rgba(205, 202, 195, 1) 0%,rgba(227, 227, 219, 1) 8%,rgba(229, 229, 222, 1) 94%,rgba(242, 242, 241, 1) 100%)
+		&:hover
+			box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #fdd889, inset -2px 2px #fbc761, inset 2px -2px #e5a01a
+		&:focus,
+		&.focused
+			box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea, inset -2px 2px #bcd4f6, inset 1px -1px #89ade4, inset 2px -2px #89ade4
+		&::-moz-focus-inner
+			border: 0
+
+summary
+	background-color: #ece9d8 !important
+	// margin-top: 40px
+	// margin-bottom: 20px
+	border: 1px #979797 solid
+	border-left: 3px #979797 solid
+	padding: 2px 7px
+
+h1, .email-is-not-verify
+	font-size: 2rem
+	line-height: 1
+	font-weight: bold
+
+h2
+	margin-top: 20px
+	margin-bottom: 10px
+	font-size: 1.5rem
+	line-height: 1
+
+h3
+	margin-bottom: 10px
+	margin-top: 20px
+	font-size: 1.15rem
+	line-height: 1
+
+.admin-bar
+	.site-header .main-navigation.active
+		top: 32px
+	.widget-area
+		top: 70px
+
+hr
+	height: 2px
+
+ul, ol
+	margin-left: 0
+
+.window *
+	box-sizing: content-box
+
+input[type=search]
+	padding: 3px 4px
+	border: 1px solid #7f9db9
+	background-color: #fff
+	box-sizing: border-box
+	appearance: none
+	border-radius: 0
+	height: 21px
+	line-height: 2
+
+.uwp_page .uwp-profile-entries h3
+	font-size: 1.15rem
+	margin-top: 0
+	margin-bottom: 5px
+
+.uwp_page .uwp-profile-avatar .uwp-profile-avatar-inner
+	margin: 0
+
+.uwp_page .uwp-content-wrap .uwp-account .uwp-account-avatar img
+	border-radius: 0
+
+.uwp-login, .uwp-registration, .uwp-forgot, .uwp-account
+	max-width: none
+
+.uwp-author-box
+	background-color: #ece9d8 !important
+	margin-top: 40px
+	margin-bottom: 20px
+	border: 1px #979797 solid
+	border-left: 3px #979797 solid
+
+.uwp_page .uwp-profile-avatar
+	background-color: #ece9d8 !important
+	padding: 20px
+	display: inline-block
+	border: 1px #979797 solid
+
+.edit-link
+	display: block
+
+.uwp_page .uwp-profile-avatar .uwp-profile-avatar-inner > img
+	margin: 0
+	border: 1px #979797 solid
+	padding: 0
+
+.uwp_page .uwp-profile-avatar .uwp-profile-avatar-inner
+	width: 120px
+	max-width: 100%
+
+.comments-area
+	.comment-author
+		padding: 5px
+		border-right: 1px #979797 solid
+		img
+			width: 100px
+			display: block
+		.fn
+			display: inline-block
+			margin-top: 5px
+	.comment-body
+		display: flex
+		flex-wrap: wrap
+		background-color: #ece9d8
+		margin-top: 20px
+		border: 1px #979797 solid
+		border-left: 3px #979797 solid
+		padding: 0
+	.comment
+		border-left: 1px #979797 solid
+		border-bottom: 1px #979797 solid
+	.comment-metadata
+		border-top: 1px #979797 solid
+		border-right: 1px #979797 solid
+		padding: 5px
+	.children
+		margin-left: 0
+	.comment-content
+		flex: 1 0 auto
+		padding: 15px 10px
+		p
+			margin: 0
+	.comment-respond
+		padding: 5px
+	.comment-reply-title
+		> *
+			display: block
+	.reply
+		border-top: 1px #979797 solid
+		padding: 5px
+		width: 100%
+
+.single
+	.post-thumbnail
+		img
+			object-position: center
+			object-fit: cover
+
+.btn
+	padding: 3px
+	min-width: 110px
+	height: 34px
+	border-radius: 0
+	margin: 20px auto 0 auto
+	color: #000
+	border: 1px solid #000
+	border-right-width: 2px
+	border-bottom-width: 2px
+	outline: none
+	text-align: center
+	box-sizing: border-box
+	cursor: pointer
+	background-color: #ECE9D8
+	&:active
+		border-width: 2px
+
+.site-main
+	padding: 35px 0
+	min-height: 100vh
+
+.site-header
+	margin-bottom: 20px
+	background: $theme-gradient
+	border: 1px #C2C2C2 solid
+	border-bottom-left-radius: 8px
+	border-bottom-right-radius: 8px
+	.main-navigation
+		background: linear-gradient(90deg, rgba(25, 99, 70, 0.84) 0%, rgba(85, 156, 85, 0.00) 5.73%, rgba(62, 151, 62, 0.00) 13.02%, rgba(73, 173, 73, 0.00) 71.88%, rgba(31, 97, 31, 0.84) 100%), linear-gradient(180deg, #3A7C3A 0%, #96C496 4.22%, #459745 23.75%, #3BA03B 48.89%, #369E36 80.73%, #247033 100%)
+		border-bottom-left-radius: 8px
+		border-bottom-right-radius: 8px
+		position: relative
+		z-index: 100
+		width: auto
+		.menu-item
+			&:first-child
+				a
+					border-bottom-left-radius: 10px
+			&:last-child
+				a
+					border-bottom-right-radius: 10px
+			a
+				padding: 10px 20px
+				font-weight: bold
+				font-style: italic
+				outline: 2px transparent solid
+				font-family: Arial, Helvetica, sans-serif
+				&:hover
+					background: linear-gradient(90deg, rgba(38, 84, 38, 0.84) 0%, rgba(17, 119, 10, 0.00) 18.23%, rgba(18, 139, 21, 0.00) 48.44%, rgba(28, 145, 30, 0.00) 75%, rgba(8, 92, 4, 0.84) 100%), linear-gradient(180deg, #22400E 0%, #318633 8.57%, #138A16 47.06%, #268B23 92.4%, #247226 100%)
+					color: #fff
+					// outline: 2px rgba(255, 255, 255, 0.15) solid
+		// &.active
+		// 	animation: slideDown .3s linear
+		// 	position: fixed
+		// 	top: 0
+		// 	width: auto
+		// 	right: calc(50% - (1320px / 2))
+		// &.hidden
+		// 	animation: slideUp .6s linear
+	a
+		color: #fff
+	.site-branding
+		margin-top: 15px
+		margin-bottom: 15px
+
+.site-header__social-list
+	list-style-type: none
+	padding: 0
+	margin: 0
+
+.site-header__icon
+	display: block
+	margin-right: 10px
+	width: 40px
+
+.site-header__social-icon
+	filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.6))
+	width: 32px
+
+.site-header__right
+	display: flex
+	flex-direction: column
+	align-items: flex-end
+	height: 100%
+
+.main-login
+	display: flex
+	align-items: center
+	gap: 1.5rem
+	margin-top: auto
+	margin-bottom: 10px
+	p, .menu-item
+		color: #fff
+		margin-top: 0
+		margin-bottom: 0
+		font-weight: 700
+		text-shadow: 2px 2px 0px rgba(0,0,0,0.6)
+	.site-header__btn, .site-header__info
+		display: inline-flex
+		align-items: center
+		text-decoration: none
+	.site-header__user-links
+		.menu
+			list-style-type: none
+			padding: 0
+			margin: 0
+			display: flex
+			.menu-item
+				a
+					text-decoration: none
+				&::after
+					content: "|"
+					position: relative
+					margin-left: 10px
+					margin-right: 10px
+				&:last-child
+					&::after
+						display: none
+
+.verify-email
+	color: #fff
+	margin-top: 0
+	margin-bottom: 10px
+	font-weight: 700
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.6)
+
+#primary-menu a
+	font-weight: bold
+	text-transform: uppercase
+	text-shadow: 3px 3px 0px rgba(0,0,0,0.6)
+
+.site-footer
+	padding: 20px 0
+	border-top-left-radius: 8px
+	border-top-right-radius: 8px
+	background: $theme-gradient
+	a, p
+		color: #fff
+	a
+		text-decoration: none
+	p
+		font-weight: 700
+		text-shadow: 2px 2px 0px rgba(0,0,0,0.6)
+	#footer-menu
+		padding: 0
+		margin: 0
+		display: flex
+		align-items: center
+		list-style-type: none
+		.menu-item
+			&:last-child
+				a
+					&::after
+						display: none
+			a
+				font-weight: 700
+				text-shadow: 2px 2px 0px rgba(0,0,0,0.6)
+				&::after
+					content: "|"
+					position: relative
+					margin-left: 10px
+					margin-right: 10px
+
+.archive-card
+	.entry-title
+		position: relative
+		padding-left: 40px
+		font-size: 1.15rem
+		&::before
+			content: ""
+			width: 30px
+			height: 30px
+			display: block
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			background-image: url(assets/img/post.png)
+		a
+			color: #000
+			text-decoration: none
+.wp-post-image
+	height: 350px
+	object-fit: cover
+
+.entry-title
+	margin-bottom: 5px
+.entry-content
+	p
+		margin-top: 5px
+		margin-bottom: 5px
+
+.comments-link
+	display: block
+
+.comment-list
+	margin: 0
+	padding-left: 20px
+	list-style-type: none
+
+.widget-area
+	position: sticky
+	top: 38px
+	ul, ol
+		margin-left: 0
+
+.copyright
+	margin-top: 0
+	margin-bottom: 10px
+
+.registration-form
+	label
+		display: block
+		margin-bottom: 10px
+
+.archive-card
+	background: #ece9d8
+	padding: 10px
+	border: 1px solid #7f9db9
+	.wp-post-image
+		height: 200px
+
+.beget-ad
+	display: block
+	padding-top: 35px
+	margin: auto
+	width: 300px
+	img
+		display: block
+
+@media screen and (min-width: 576px)
+	.main-navigation
+		&.active
+			animation: slideDown .3s linear
+			position: fixed
+			top: 0
+			width: auto
+			right: calc(50% - (540px / 2))
+		&.hidden
+			animation: slideUp .6s linear
+
+@media screen and (min-width: 768px)
+	.main-navigation
+		&.active
+			right: calc(50% - (720px / 2))
+
+@media screen and (min-width: 992px)
+	.main-navigation
+		&.active
+			right: calc(50% - (960px / 2))
+
+@media screen and (min-width: 1200px)
+	.main-navigation
+		&.active
+			right: calc(50% - (1140px / 2))
+
+@media screen and (min-width: 1400px)
+	.main-navigation
+		&.active
+			right: calc(50% - (1320px / 2))
+
+@media screen and (max-width: 576px)
+	.site-header__right
+		flex-direction: column-reverse
+		padding-bottom: 10px
+	.widget-area
+		margin-top: 40px
+	.site-footer #footer-menu
+		display: block
+		.menu-item a::after
+			display: none
