@@ -18,11 +18,13 @@ get_header();
 			<div class="row">
 				<div class="col">
 					<header class="page-header">
-						<h1 class="page-title"><?php esc_html_e('Oops! That page can&rsquo;t be found.', 'old2000'); ?></h1>
+						<h1 class="page-title"><?php esc_html_e('Ой! Ничего не найдено...', 'old2000'); ?></h1>
 					</header><!-- .page-header -->
 
 					<div class="page-content">
-						<p><?php esc_html_e('It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'old2000'); ?></p>
+						<p><?php esc_html_e('Но вы можете поискать наши другие статьи =)', 'old2000'); ?></p>
+
+						<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/dog-reading.gif'); ?>" alt="">
 
 						<?php
 						get_search_form();
@@ -31,7 +33,7 @@ get_header();
 						?>
 
 						<div class="widget widget_categories">
-							<h2 class="widget-title"><?php esc_html_e('Most Used Categories', 'old2000'); ?></h2>
+							<h2 class="widget-title"><?php esc_html_e('Популярные категории', 'old2000'); ?></h2>
 							<ul>
 								<?php
 								wp_list_categories(
@@ -49,7 +51,7 @@ get_header();
 
 						<?php
 						/* translators: %1$s: smiley */
-						$old2000_archive_content = '<p>' . sprintf(esc_html__('Try looking in the monthly archives. %1$s', 'old2000'), convert_smilies(':)')) . '</p>';
+						$old2000_archive_content = '<p>' . esc_html__('Попробуйте поискать в архиве:', 'old2000') . '</p>';
 						the_widget('WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$old2000_archive_content");
 
 						the_widget('WP_Widget_Tag_Cloud');

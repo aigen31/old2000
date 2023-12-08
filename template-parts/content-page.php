@@ -22,7 +22,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'old2000' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Страницы:', 'old2000' ),
 				'after'  => '</div>',
 			)
 		);
@@ -36,7 +36,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'old2000' ),
+						__( 'Редактировать <span class="screen-reader-text">%s</span>', 'old2000' ),
 						array(
 							'span' => array(
 								'class' => array(),
