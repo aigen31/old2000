@@ -4919,6 +4919,23 @@ input[type=search] {
 	object-fit: cover;
 }
 
+.wp-block-yoast-seo-table-of-contents {
+	float: left;
+}
+
+.wp-block-yoast-seo-table-of-contents h2 {
+	margin-top: 0;
+}
+
+.wp-block-yoast-seo-table-of-contents > ul {
+	background-color: #ece9d8 !important;
+	padding: 15px 20px 15px 30px;
+	border-radius: 2px;
+	border: 1px #979797 solid;
+	border-left: 3px #979797 solid;
+	margin-right: 30px;
+}
+
 .entry-title {
 	margin-bottom: 5px;
 }
@@ -5012,6 +5029,12 @@ input[type=search] {
 @media screen and (min-width: 1400px) {
 	.main-navigation.active {
 		right: calc(50% - (1320px / 2));
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.wp-block-yoast-seo-table-of-contents {
+		float: none;
 	}
 }
 
