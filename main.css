@@ -4515,6 +4515,10 @@ input[type=submit]:not(:disabled)::-moz-focus-inner {
 	border: 0;
 }
 
+.breadcrumbs {
+	margin: 0;
+}
+
 summary {
 	background-color: #ece9d8 !important;
 	border: 1px #979797 solid;

@@ -116,3 +116,15 @@
 				</div>
 			</div>
 		</header>
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<?php
+					if (function_exists('yoast_breadcrumb')) {
+						yoast_breadcrumb('<p class="breadcrumbs" id="breadcrumbs">', '</p>');
+					}
+					?>
+				</div>
+			</div>
+		</div>
