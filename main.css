@@ -4925,6 +4925,7 @@ input[type=search] {
 
 .wp-block-yoast-seo-table-of-contents {
 	float: left;
+	max-width: 400px;
 }
 
 .wp-block-yoast-seo-table-of-contents h2 {
